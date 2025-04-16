@@ -1,0 +1,64 @@
+/* Hide scrollbars but keep functionality */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+/* Improved touch targets for mobile */
+@media (max-width: 768px) {
+  button,
+  a,
+  [role="button"],
+  input[type="checkbox"],
+  input[type="radio"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Increase font size for better readability */
+  body {
+    font-size: 16px;
+  }
+
+  /* Add extra padding to form elements */
+  input,
+  select,
+  textarea {
+    padding: 12px;
+  }
+
+  /* Improve spacing in mobile layouts */
+  .card-content {
+    padding: 16px;
+  }
+
+  /* Ensure buttons have enough space */
+  .button-group {
+    gap: 12px;
+  }
+
+  /* Fix for iOS momentum scrolling */
+  .scroll-container {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Bottom safe area for mobile devices with notches */
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+}
+
+/* Prevent pull-to-refresh on iOS */
+html,
+body {
+  overscroll-behavior-y: contain;
+}
+
+/* Improve tap highlight color */
+* {
+  -webkit-tap-highlight-color: rgba(255, 193, 7, 0.2);
+}

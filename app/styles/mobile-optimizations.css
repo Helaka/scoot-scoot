@@ -1,0 +1,37 @@
+/* app/styles/mobile-optimizations.css */
+
+/* This file is intended to hold styles that optimize the application for mobile devices. */
+
+/* Example: Adjust font sizes for better readability on smaller screens */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px; /* Adjust as needed */
+  }
+}
+
+/* Example: Adjust padding and margins for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Example: Make images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Example: Improve button spacing */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* 12px */
+}
+
+@media (min-width: 768px) {
+  .button-group {
+    flex-direction: row;
+  }
+}
